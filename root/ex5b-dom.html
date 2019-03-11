@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5 - DOM - add DOM elements</title>
+    
+<!--    font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<!--    bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<!--    custom css-->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+    <header class="container">
+        <h1>Coral Reefs</h1>
+        <h2>They need our help to survive</h2>
+        <figure class="featuredImg">
+            <img src="images/c1.jpg" alt="A photo of a healthy reef" class="img-fluid">
+        </figure>
+    </header>
+    
+    
+
+
+    <script>
+        const FEATURED = document.querySelector('.featuredImg');// figure
+        const IMAGE = FEATURED.querySelector('img'); // the image inside of the figure tag
+        
+        var altText = IMAGE.getAttribute('alt');
+        
+        var figCapEl = document.createElement('figcaption');
+
+       figCapEl.append(altText);
+        FEATURED.append(figCapEl);
+        
+        IMAGE.setAttribute('alt','coral reef');
+
+
+
+    </script>
+</body>
+</html>
